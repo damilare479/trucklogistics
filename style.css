@@ -1,0 +1,1517 @@
+*{
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   font-family: Arial, Helvetica, sans-serif; 
+}
+
+html {
+    font-size: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar{
+    width: .8rem;
+}
+
+html::-webkit-scrollbar-track{
+    background-color: #fff;
+}
+
+html::-webkit-scrollbar-thumb{
+    background-color: #1439b4;
+}
+
+.nav {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 2rem 6.5rem;
+    background: #333;
+    z-index: 100000;
+}
+
+.nav h2 {
+    color: #fff;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+
+#navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#navbar li {
+    list-style: none;
+    padding-right: 50px;
+}
+
+#navbar li a{
+    text-decoration: none;
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: #333;
+    font-weight: 700;
+    padding: .6rem 1.8rem;
+    background: #fff;
+    transition: .4s;
+    box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+}
+
+#navbar li a:hover {
+    letter-spacing: .5rem;
+    background: #333;
+    color: #fff;
+}
+
+#bar {
+    color: #fff;
+    font-weight: bold;
+    font-size: 2rem;
+    display: none;
+}
+
+.background {
+    background-image: url(Image/2017_Transport-Logistics-truck-1280x640.jpg);
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+.background .overlay {
+    width: 100%;
+    height: 100%;
+    opacity: 0.75;
+    background: #171819;
+}
+
+.mid {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.mid p {
+    color: #7f8c8d;
+    font-size: 1.3rem;
+    margin-bottom: 1.4rem;
+}
+
+.mid h1 {
+    color: #fff;
+    font-size: 4rem;
+    text-transform: uppercase;
+}
+
+.mid .btn {
+    margin-top: 2rem;
+} 
+
+.mid .btn a {
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 0.9rem 1.6rem;
+    color: #fff;
+    background: #222;
+    font-weight: 500;
+    border-radius: 5px;
+}
+
+.mid .btn a:hover {
+    color: #222;
+    background: #fff;
+}
+
+.about-us {
+    background: #f9f9f9;
+    padding: 8rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about-us .about {
+    width: 39%;
+}
+
+
+.about-us .about h2 {
+   color: #212529;
+   font-size: 2.7rem;
+   padding-bottom: 1.8rem;
+}
+
+.about-us .about p {
+    color: #7f8c8d;
+    font-size: 1.1rem;
+    text-align: justify;
+ }
+
+.about-us .people {
+    width: 57%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about-us .people .card1{
+    width: 45%;
+    height: 500px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,.3);
+    position: relative;
+    overflow: hidden;
+
+}
+
+.about-us .people .card1 .img{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    position: absolute;
+    left: 0;
+    transition: 0.5s;
+    z-index: 2;
+    background: #000;
+}
+
+.about-us .people .card1:hover .img{
+    transform: translateY(-100px);
+}
+
+.about-us .people .card1 .img img{
+   transition: 0.5s;
+   width: 100%;
+   height: 500px;
+   object-fit: cover;
+}
+
+.about-us .people .card1:hover .img img{
+   opacity: 0.5;
+ }
+
+.about-us .people .card1 .social-icons{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.about-us .people .card1 .social-icons li{
+   list-style: none;
+}
+
+.about-us .people .card1 .social-icons li a{
+    position: relative;
+    display: block;
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    text-align: center;
+    background: #fff;
+    color: #262626;
+    margin: 0 5px;
+    border-radius: 50%;
+    transition: 0.5s;
+    transform: translateY(200px);
+    opacity: 0;
+ }
+
+ .about-us .people .card1:hover .social-icons li a {
+    transform: translateY(0px);
+    opacity: 1;
+ }
+
+ .about-us .people .card1:hover .social-icons li a i {
+    font-size: 24px;
+    line-height: 50px;
+    transition: .5s;
+ }
+
+ .about-us .people .card1:hover .social-icons li a:hover i {
+    transform: rotateY(360deg);
+    
+ }
+
+ .about-us .people .card1:hover .social-icons li:nth-child(1) a {
+    transition-delay: 0s;
+ }
+
+ .about-us .people .card1:hover .social-icons li:nth-child(2) a {
+    transition-delay: .2s;
+ }
+ .about-us .people .card1:hover .social-icons li:nth-child(3) a {
+    transition-delay: .4s;
+ }
+
+ .about-us .people .card1:hover .social-icons li:nth-child(4) a {
+    transition-delay: .6s;
+ }
+
+ .about-us .people .card1 .details {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #fff;
+    z-index: 4;
+    width: 100%;
+    height: 100px;
+    box-sizing: border-box;
+    padding: 10px;
+    z-index: 1;
+ }
+
+ .about-us .people .card1 .details h2{
+    margin: 10px 0 0;
+    text-align: center;
+    padding: 0;
+ }
+
+ .about-us .people .card1 .details h2 span{
+    color: #bbb;
+    font-size: 24px;
+ }
+
+ .service {
+    padding: 6rem 8rem 6rem 8rem;
+    background: #eee;
+}
+
+.service h2 {
+    font-size: 4rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: #1439b4;
+    padding-bottom: 2.5vw;
+    font-family: cursive;
+}
+
+.service p {
+    font-size: 1rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: #bbb;
+   
+}
+
+.service .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    grid-gap: 2rem;
+    
+}
+
+.service .box-container .box {
+    
+    border: none;
+    box-shadow: 0 5px 20px rgba(0,0,0,.3);
+    background: #fff;
+
+}
+
+.service .box-container .package-img {
+    height: 25rem;
+    overflow: hidden;
+}
+
+.service .box-container .package-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .2s linear;
+    transform: scale(1);
+    transition: 0.3s ease-in-out;
+}
+
+.service .box-container .package-img img:hover {
+    transform: scale(1.5);
+
+}
+
+.service .box-container .packages-content .btn {
+    align-items: center;
+    justify-content: center;
+}
+
+.service .box-container .packages-content {
+    padding: 2rem;
+    text-align: center;
+}
+
+.service .box-container .packages-content h3 {
+    font-size: 2.5rem;
+    color: #000;
+    margin-bottom: 2rem;
+}
+
+.service .box-container .packages-content p {
+    font-size: 1.3rem;
+    color: #bbb;
+    line-height: 2;
+    padding: 1rem 0;
+}
+
+
+.service .box-container .packages-content a{
+    padding: 0.9rem 2rem;
+    color: #fff;
+    background: #222;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.service .box-container .packages-content a:hover{
+    background: #1439b4;
+    color: #fff;
+    box-shadow: 0 5px 20px rgba(0,0,0,.3);
+    letter-spacing: 3px;
+}
+
+.contact {
+    padding: 8rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.contact .form{
+    width: 45%;
+}
+
+.contact .map{
+    width: 45%;
+}
+
+.contact .map h2{
+    font-size: 2rem;
+    color: #212529;
+    padding-bottom: 20px;
+    width: 100%;
+}
+
+
+.contact .map iframe{
+    width: 100%;
+}
+
+.contact .form h2{
+    font-size: 2rem;
+    color: #212529;
+    padding-bottom: 10px;
+    width: 100%;
+}
+
+.contact .map h2 i{
+    font-size: 2rem;
+    color: #1439b4;
+    padding-right: 8px;
+    
+}
+
+.contact .form .submit{
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   align-items: flex-start;
+}
+
+.contact .form .submit input, .contact .form .submit select, .contact .form .submit textarea {
+    width: 100%;
+    padding: 18px;
+    border: 1px solid #95a5a6;
+    outline: none;
+    margin: 13px 0;
+}
+
+.contact .form .submit input:focus, .contact .form .submit textarea:focus {
+    border: 2px solid #1439b4;
+}
+
+.contact .form .submit input::placeholder {
+    font-size: 1.1rem;
+    color: #7f8c8d;
+}
+
+.contact .form .submit select::placeholder {
+    font-size: 1.1rem;
+    color: #7f8c8d;
+}
+
+.contact .form .submit textarea::placeholder {
+    font-size: 1.1rem;
+    color: #7f8c8d;
+    height: 80%;
+}
+
+.contact .form .submit button {
+    width: 100%;
+    padding: 15px 0;
+    text-decoration: none;
+    background: #000;
+    color: #fff;
+    text-align: center;
+    font-size: 1.1rem;
+    margin: 13px 0;
+}
+
+.contact .form .submit button:hover {
+    color: #fff;
+    background: #1439b4;
+    border: #1439b4;
+}
+
+.footer {
+    border-top: 1px solid #ecf0f1;
+    padding: 5rem 8rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer p {
+    color: #7f8c8d;
+    justify-content: flex-start;
+    font-size: 1rem;
+}
+
+.footer .contacts i {
+    padding-right: 8px;
+    font-size: 1.5rem;
+}
+
+.footer .contacts p {
+    padding-bottom: 5px;
+    font-size: 1.2rem;
+    
+}
+
+.footer .contacts i:hover {
+    color: #1439b4;
+}
+
+/*---Media Query---*/
+
+@media screen and (max-width: 1150px){
+    .nav {
+        padding: 1.5rem 4rem;
+    }
+    
+    .nav h2 {
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+    
+    #navbar li {
+        padding-right: 30px;
+    }
+    
+    #navbar li a{
+        font-size: 0.9rem; 
+        padding: .45rem 1.5rem;
+    }
+
+    .mid p {
+        font-size: 1.1rem;
+        margin-bottom: 1.2rem;
+    }
+    
+    .mid h1 {
+        font-size: 2.5rem;
+    }
+    
+    .mid .btn {
+        margin-top: 1.7rem;
+    } 
+    
+    .mid .btn a {
+        padding: 0.8rem 1.5rem;
+    }
+
+    .about-us {
+        padding: 6rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .about-us .about {
+        width: 100%;
+        padding-bottom: 1.1rem;
+    }
+    
+    .about-us .about h2 {
+       color: #212529;
+       font-size: 2rem;
+       padding-bottom: 1.4rem;
+    }
+    
+    .about-us .about p {
+        font-size: 1rem;
+        text-align: justify;
+     }
+    
+    .about-us .people {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .about-us .people .card1{
+        width: 45%;
+        height: 500px;
+        box-sizing: border-box;
+        border-radius: 15px;
+        box-shadow: 0 5px 20px rgba(0,0,0,.3);
+        position: relative;
+        overflow: hidden;
+    
+    }
+
+}
+
+@media screen and (max-width: 991px){
+    .nav {
+        padding: 1.5rem 3rem;
+    }
+    
+    .nav h2 {
+        font-size: 1.6rem;
+    }
+    
+    
+    #navbar {
+        flex-direction: column;
+        text-align: center;
+        width: 300px;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: -300px;
+        background: rgba(0,0,0,0.8);
+        z-index: 100000;
+        margin-top: 4.8rem;
+        transition: 0.5s;
+    }
+    
+    #navbar li {
+        padding-right: 0;
+        padding: 2rem 0;
+    }
+    
+    #navbar li a{
+        font-size: 1.4rem;
+    }
+    
+    #bar {
+        display: initial;
+        cursor: pointer;
+    }
+
+    .mid p {
+        font-size: 1.1rem;
+        margin-bottom: 1.2rem;
+    }
+    
+    .mid h1 {
+        font-size: 2.5rem;
+    }
+    
+    .mid .btn {
+        margin-top: 1.5rem;
+    } 
+    
+    .mid .btn a {
+        padding: 0.7rem 1.5rem;
+        font-size: 0.9rem;
+    }
+    
+    .about-us {
+        padding: 6rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .about-us .about {
+        width: 100%;
+        padding-bottom: 1.1rem;
+    }
+    
+    .about-us .about h2 {
+       color: #212529;
+       font-size: 2rem;
+       padding-bottom: 1.4rem;
+    }
+    
+    .about-us .about p {
+        font-size: 1rem;
+        text-align: justify;
+     }
+    
+    .about-us .people {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .about-us .people .card1{
+        width: 45%;
+        height: 500px;
+        box-sizing: border-box;
+        border-radius: 15px;
+        box-shadow: 0 5px 20px rgba(0,0,0,.3);
+        position: relative;
+        overflow: hidden;
+    
+    }
+    
+    .about-us .people .card1 .img{
+        width: 100%;
+        height: 100%;
+        top: 0;
+        position: absolute;
+        left: 0;
+        transition: 0.5s;
+        z-index: 2;
+        background: #000;
+    }
+    
+    .about-us .people .card1:hover .img{
+        transform: translateY(-100px);
+    }
+    
+    .about-us .people .card1 .img img{
+       transition: 0.5s;
+       width: 100%;
+       height: 500px;
+       object-fit: cover;
+    }
+    
+    .about-us .people .card1:hover .img img{
+       opacity: 0.5;
+     }
+    
+    .about-us .people .card1 .social-icons{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 3;
+        display: flex;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .about-us .people .card1 .social-icons li{
+       list-style: none;
+    }
+    
+    .about-us .people .card1 .social-icons li a{
+        position: relative;
+        display: block;
+        height: 50px;
+        width: 50px;
+        line-height: 50px;
+        text-align: center;
+        background: #fff;
+        color: #262626;
+        margin: 0 5px;
+        border-radius: 50%;
+        transition: 0.5s;
+        transform: translateY(200px);
+        opacity: 0;
+     }
+    
+     .about-us .people .card1:hover .social-icons li a {
+        transform: translateY(0px);
+        opacity: 1;
+     }
+    
+     .about-us .people .card1:hover .social-icons li a i {
+        font-size: 24px;
+        line-height: 50px;
+        transition: .5s;
+     }
+    
+     .about-us .people .card1:hover .social-icons li a:hover i {
+        transform: rotateY(360deg);
+        
+     }
+    
+     .about-us .people .card1:hover .social-icons li:nth-child(1) a {
+        transition-delay: 0s;
+     }
+    
+     .about-us .people .card1:hover .social-icons li:nth-child(2) a {
+        transition-delay: .2s;
+     }
+     .about-us .people .card1:hover .social-icons li:nth-child(3) a {
+        transition-delay: .4s;
+     }
+    
+     .about-us .people .card1:hover .social-icons li:nth-child(4) a {
+        transition-delay: .6s;
+     }
+    
+     .about-us .people .card1 .details {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: #fff;
+        z-index: 4;
+        width: 100%;
+        height: 100px;
+        box-sizing: border-box;
+        padding: 10px;
+        z-index: 1;
+     }
+    
+     .about-us .people .card1 .details h2{
+        margin: 10px 0 0;
+        text-align: center;
+        padding: 0;
+     }
+    
+     .about-us .people .card1 .details h2 span{
+        color: #bbb;
+        font-size: 24px;
+     }
+
+     .contact {
+        padding: 6rem;
+    }
+    
+    
+    .contact .map{
+        width: 45%;
+    }
+    
+    .contact .map h2{
+        font-size: 1.5rem;
+        padding-bottom: 15px;
+    }
+    
+    
+    .contact .map iframe{
+        height: 420px;
+    }
+    
+    .contact .form h2{
+        font-size: 1.5rem;
+        padding-bottom: 7px;
+    }
+    
+    .contact .map h2 i{
+        font-size: 1.5rem;
+        padding-right: 6px;
+        
+    }
+    
+    .contact .form .submit input, .contact .form .submit textarea {
+        padding: 12px;
+        margin: 10px 0;
+    }
+    
+    .contact .form .submit input::placeholder {
+        font-size: 1rem;
+    }
+    
+    .contact .form .submit textarea::placeholder {
+        font-size: 1rem;
+    }
+    
+    .contact .form .submit a {
+        width: 100%;
+        padding: 13px 0;
+        font-size: 1rem;
+        margin: 10px 0;
+    }
+    
+    .contact .form .submit a:hover {
+        color: #fff;
+        background: #1439b4;
+    }
+
+    .footer {
+        padding: 6rem;
+    }
+    
+    .footer p {
+        font-size: 1rem;
+    }
+    
+    .footer .contacts i {
+        padding-right: 8px;
+        font-size: 1.3rem;
+    }
+    
+    .footer .contacts p {
+        padding-bottom: 5px;
+        font-size: 1.1rem;
+        
+    }
+    
+    .footer .contacts i:hover {
+        color: #1439b4;
+    }
+}
+
+@media screen and (max-width: 768px){
+    
+    .nav h2 {
+        font-size: 1.5rem;
+    }
+    
+    .background {
+        background-position: center;
+    }
+    
+    .mid p {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .mid h1 {
+        font-size: 2.1rem;
+    }
+    
+    .mid .btn {
+        margin-top: 1.5rem;
+    } 
+    
+    .mid .btn a {
+        padding: 0.7rem 1.5rem;
+        font-size: 0.9rem;
+    }
+    
+    .about-us {
+        padding: 6rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .about-us .about {
+        width: 100%;
+        padding-bottom: 1.1rem;
+    }
+    
+    .about-us .about h2 {
+       color: #212529;
+       font-size: 2rem;
+       padding-bottom: 1.4rem;
+    }
+    
+    .about-us .about p {
+        font-size: 1rem;
+        text-align: justify;
+     }
+    
+    .about-us .people {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .about-us .people .card1{
+        width: 100%;
+        height: 450px;
+        box-sizing: border-box;
+        border-radius: 15px;
+        box-shadow: 0 5px 20px rgba(0,0,0,.3);
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 3rem;
+    }
+    
+    .about-us .people .card1 .img{
+        width: 100%;
+        height: 100%;
+        top: 0;
+        position: absolute;
+        left: 0;
+        transition: 0.5s;
+        z-index: 2;
+        background: #000;
+    }
+    
+    .about-us .people .card1:hover .img{
+        transform: translateY(-100px);
+    }
+    
+    .about-us .people .card1 .img img{
+       transition: 0.5s;
+       width: 100%;
+       height: 450px;
+       object-fit: cover;
+    }
+    
+    .about-us .people .card1:hover .img img{
+       opacity: 0.5;
+     }
+    
+    .about-us .people .card1 .social-icons{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 3;
+        display: flex;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .about-us .people .card1 .social-icons li{
+       list-style: none;
+    }
+    
+    .about-us .people .card1 .social-icons li a{
+        position: relative;
+        display: block;
+        height: 50px;
+        width: 50px;
+        line-height: 50px;
+        text-align: center;
+        background: #fff;
+        color: #262626;
+        margin: 0 5px;
+        border-radius: 50%;
+        transition: 0.5s;
+        transform: translateY(200px);
+        opacity: 0;
+     }
+    
+     .about-us .people .card1:hover .social-icons li a {
+        transform: translateY(0px);
+        opacity: 1;
+     }
+    
+     .about-us .people .card1:hover .social-icons li a i {
+        font-size: 24px;
+        line-height: 50px;
+        transition: .5s;
+     }
+    
+     .about-us .people .card1:hover .social-icons li a:hover i {
+        transform: rotateY(360deg);
+        
+     }
+    
+     .about-us .people .card1:hover .social-icons li:nth-child(1) a {
+        transition-delay: 0s;
+     }
+    
+     .about-us .people .card1:hover .social-icons li:nth-child(2) a {
+        transition-delay: .2s;
+     }
+     .about-us .people .card1:hover .social-icons li:nth-child(3) a {
+        transition-delay: .4s;
+     }
+    
+     .about-us .people .card1:hover .social-icons li:nth-child(4) a {
+        transition-delay: .6s;
+     }
+    
+     .about-us .people .card1 .details {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: #fff;
+        z-index: 4;
+        width: 100%;
+        height: 100px;
+        box-sizing: border-box;
+        padding: 10px;
+        z-index: 1;
+     }
+    
+     .about-us .people .card1 .details h2{
+        margin: 10px 0 0;
+        text-align: center;
+        padding: 0;
+     }
+    
+     .about-us .people .card1 .details h2 span{
+        color: #bbb;
+        font-size: 24px;
+     }
+
+     .service {
+        padding: 6rem;
+        background: #eee;
+    }
+
+    .contact {
+        padding: 6rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    
+    .contact .form{
+        width: 100%;
+    }
+    
+    .contact .map{
+        width: 100%;
+        padding-top: 2rem;
+    }
+    
+    
+    .contact .map h2{
+        font-size: 1.5rem;
+        padding-bottom: 15px;
+    }
+    
+    
+    .contact .map iframe{
+        height: 420px;
+    }
+    
+    .contact .form h2{
+        font-size: 1.5rem;
+        padding-bottom: 7px;
+    }
+    
+    .contact .map h2 i{
+        font-size: 1.5rem;
+        padding-right: 6px;
+        
+    }
+    
+    .contact .form .submit input, .contact .form .submit textarea {
+        padding: 12px;
+        margin: 10px 0;
+    }
+    
+    .contact .form .submit input::placeholder {
+        font-size: 1rem;
+    }
+    
+    .contact .form .submit textarea::placeholder {
+        font-size: 1rem;
+    }
+    
+    .contact .form .submit a {
+        width: 100%;
+        padding: 13px 0;
+        font-size: 1rem;
+        margin: 10px 0;
+    }
+    
+    .contact .form .submit a:hover {
+        color: #fff;
+        background: #1439b4;
+    }
+
+    .footer {
+        padding: 5rem 2rem;
+    }
+    
+    .footer p {
+        font-size: 1rem;
+    }
+    
+    .footer .contacts i {
+        padding-right: 8px;
+        font-size: 1.3rem;
+    }
+    
+    .footer .contacts p {
+        padding-bottom: 5px;
+        font-size: 1.1rem;
+        
+    }
+    
+    .footer .contacts i:hover {
+        color: #1439b4;
+    }
+}
+
+@media screen and (max-width: 496px){
+    .nav h2 {
+        font-size: 1.5rem;
+    }
+    
+    
+    .mid p {
+
+        margin-bottom: 0.1rem;
+    }
+    
+    .mid h1 {
+        font-size: 1.3rem;
+    }
+    
+    .mid .btn {
+        margin-top: 2rem;
+
+    } 
+    
+    .mid .btn a {
+        padding: 0.7rem 1rem;
+        font-size: 0.6rem;
+    }
+    
+    .about-us {
+        padding: 4rem 1rem;
+    }
+    
+    .about-us .about {
+        width: 100%;
+    }
+    
+    .about-us .about h2 {
+       color: #212529;
+       font-size: 1.7rem;
+       padding-bottom: 1.4rem;
+    }
+    
+    .about-us .about p {
+        font-size: 1rem;
+        text-align: justify;
+     }
+    
+    .about-us .people {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .about-us .people .card1{
+        width: 100%;
+        height: 450px;
+        box-sizing: border-box;
+        border-radius: 15px;
+        box-shadow: 0 5px 20px rgba(0,0,0,.3);
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 3rem;
+    }
+    
+    .about-us .people .card1 .img{
+        width: 100%;
+        height: 100%;
+        top: 0;
+        position: absolute;
+        left: 0;
+        transition: 0.5s;
+        z-index: 2;
+        background: #000;
+    }
+    
+    .about-us .people .card1:hover .img{
+        transform: translateY(-100px);
+    }
+    
+    .about-us .people .card1 .img img{
+       transition: 0.5s;
+       width: 100%;
+       height: 450px;
+       object-fit: cover;
+    }
+    
+    .about-us .people .card1:hover .img img{
+       opacity: 0.5;
+     }
+    
+    .about-us .people .card1 .social-icons{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 3;
+        display: flex;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .about-us .people .card1 .social-icons li{
+       list-style: none;
+    }
+    
+    .about-us .people .card1 .social-icons li a{
+        position: relative;
+        display: block;
+        height: 50px;
+        width: 50px;
+        line-height: 50px;
+        text-align: center;
+        background: #fff;
+        color: #262626;
+        margin: 0 5px;
+        border-radius: 50%;
+        transition: 0.5s;
+        transform: translateY(200px);
+        opacity: 0;
+     }
+    
+     .about-us .people .card1:hover .social-icons li a {
+        transform: translateY(0px);
+        opacity: 1;
+     }
+    
+     .about-us .people .card1:hover .social-icons li a i {
+        font-size: 24px;
+        line-height: 50px;
+        transition: .5s;
+     }
+    
+     .about-us .people .card1:hover .social-icons li a:hover i {
+        transform: rotateY(360deg);
+        
+     }
+    
+     .about-us .people .card1:hover .social-icons li:nth-child(1) a {
+        transition-delay: 0s;
+     }
+    
+     .about-us .people .card1:hover .social-icons li:nth-child(2) a {
+        transition-delay: .2s;
+     }
+     .about-us .people .card1:hover .social-icons li:nth-child(3) a {
+        transition-delay: .4s;
+     }
+    
+     .about-us .people .card1:hover .social-icons li:nth-child(4) a {
+        transition-delay: .6s;
+     }
+    
+     .about-us .people .card1 .details {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: #fff;
+        z-index: 4;
+        width: 100%;
+        height: 100px;
+        box-sizing: border-box;
+        padding: 10px;
+        z-index: 1;
+     }
+    
+     .about-us .people .card1 .details h2{
+        margin: 10px 0 0;
+        text-align: center;
+        padding: 0;
+     }
+    
+     .about-us .people .card1 .details h2 span{
+        color: #bbb;
+        font-size: 24px;
+     }
+
+     .service {
+        padding: 2rem 1rem;
+        background: #eee;
+    }
+
+    .service .box-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+        grid-gap: 2rem;
+        
+    }
+
+    .service h2 {
+        font-size: 2rem;
+    }
+    
+    .service .box-container .package-img {
+        height: 15rem;
+        overflow: hidden;
+    }
+    
+    .service .box-container .package-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: .2s linear;
+    }
+    
+    .service .box-container .package-img img:hover {
+        zoom: 120%;
+    }
+    
+    .service .box-container .packages-content .btn {
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .service .box-container .packages-content {
+        padding: 2rem;
+        text-align: center;
+    }
+    
+    .service .box-container .packages-content h3 {
+        font-size: 1.5rem;
+        color: #000;
+        margin-bottom: 2rem;
+    }
+    
+    .service .box-container .packages-content p {
+        font-size: 1.3rem;
+        color: #bbb;
+        line-height: 2;
+        padding: 1rem 0;
+    }
+    
+    
+    .service .box-container .packages-content a{
+        padding: 0.9rem 2rem;
+        color: #fff;
+        background: #222;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: .3s;
+    }
+    
+    .service .box-container .packages-content a:hover{
+        background: #1439b4;
+        color: #fff;
+        box-shadow: 0 5px 20px rgba(0,0,0,.3);
+        letter-spacing: 3px;
+    }
+    
+
+    .contact {
+        padding: 2rem 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    
+    .contact .form{
+        width: 100%;
+    }
+    
+    .contact .map{
+        width: 100%;
+        padding-top: 2rem;
+    }
+    
+    
+    .contact .map h2{
+        font-size: 1.3rem;
+        padding-bottom: 15px;
+    }
+    
+    
+    .contact .map iframe{
+        height: 300px;
+    }
+    
+    .contact .form h2{
+        font-size: 1.3rem;
+        padding-bottom: 7px;
+    }
+    
+    .contact .map h2 i{
+        font-size: 1.5rem;
+        padding-right: 6px;
+        
+    }
+    
+    .contact .form .submit input, .contact .form .submit textarea {
+        padding: 12px;
+        margin: 10px 0;
+    }
+    
+    .contact .form .submit input::placeholder {
+        font-size: 1rem;
+    }
+    
+    .contact .form .submit textarea::placeholder {
+        font-size: 1rem;
+    }
+    
+    .contact .form .submit a {
+        width: 100%;
+        padding: 13px 0;
+        font-size: 1rem;
+        margin: 10px 0;
+    }
+    
+    .contact .form .submit a:hover {
+        color: #fff;
+        background: #1439b4;
+    }
+
+    .footer {
+        padding: 4rem 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .footer p {
+        font-size: .8rem;
+        margin-bottom: 10px;
+    }
+    
+    .footer .contacts i {
+        padding-right: 8px;
+        font-size: 0.9rem;
+    }
+    
+    .footer .contacts p {
+        padding-bottom: 5px;
+        font-size: 0.8rem;
+        
+    }
+    
+    .footer .contacts i:hover {
+        color: #1439b4;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
